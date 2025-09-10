@@ -1,0 +1,161 @@
+/* ---------------------- */
+/* Style général de la page */
+/* ---------------------- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #2c2c2c;
+  background: linear-gradient(
+    135deg,
+    #1a237e,
+    #3949ab
+  ); /* couleurs différentes pour salle électrique */
+}
+
+/* ---------------------- */
+/* Header */
+/* ---------------------- */
+header {
+  background: linear-gradient(135deg, #283593, #5c6bc0);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* ---------------------- */
+/* Section principale avec image et texte */
+/* ---------------------- */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.game-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.image-box {
+  flex: 1 1 250px;
+  max-width: 250px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+.text-box {
+  flex: 2 1 400px;
+}
+
+.text-box h2 {
+  font-size: 2rem;
+  color: #ffcc80;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.text-box p,
+.text-box ul li {
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.text-box ul {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* ---------------------- */
+/* Footer et boutons */
+/* ---------------------- */
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: #283593;
+  color: #fff;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer table {
+  margin: 0 auto;
+}
+
+footer td {
+  padding: 0.5rem 1rem;
+}
+
+button {
+  background: linear-gradient(135deg, #3949ab, #5c6bc0);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #5c6bc0, #7986cb);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.5);
+}
+
+/* ---------------------- */
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .image-box {
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .text-box {
+    flex: 1 1 100%;
+  }
+}
