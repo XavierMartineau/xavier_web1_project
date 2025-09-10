@@ -1,124 +1,138 @@
 /* ---------------------- */
-/* Style général de la page */
+/* Style général de la page Étage */
 /* ---------------------- */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #fff;
-  background: linear-gradient(135deg, #1a237e, #3949ab); /* par défaut */
+  background: linear-gradient(
+    160deg,
+    #2c003e,
+    #4a148c
+  ); /* plus sombre que la page principale */
+  transition: background 0.5s ease;
 }
 
-/* ---------------------- */
-/* Classe spécifique pour la salle électrique */
-body.electrique {
-  background: linear-gradient(135deg, #1a237e, #3949ab);
-}
-
-/* ---------------------- */
 /* Header */
 header {
-  background: linear-gradient(135deg, #283593, #5c6bc0);
-  color: #fff;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: clamp(1rem, 3vw, 3rem);
+  background: linear-gradient(135deg, #5e0b8b, #9c27b0);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.8rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: bold;
   letter-spacing: 3px;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
+  color: #ffbb33;
 }
 
-/* ---------------------- */
-/* Section principale avec image et texte */
+/* Main container avec image et texte */
 main {
+  width: 90%;
   max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin: 2rem auto;
+  padding: clamp(1rem, 2vw, 2rem);
+  background: rgba(60, 0, 80, 0.25); /* semi-transparent violet foncé */
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
 }
 
-.game-section {
+.main-container {
   display: flex;
+  gap: 1rem;
   flex-wrap: wrap;
-  width: 100%;
+  align-items: flex-start;
 }
 
+/* Boîte pour l'image */
 .image-box {
-  flex: 1 1 250px;
-  max-width: 250px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #9c27b0, 0 0 30px #ba68c8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-box img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  height: 100%;
   object-fit: cover;
 }
 
+.image-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #ff704d, 0 0 40px #ba68c8;
+}
+
+/* Texte */
 .text-box {
-  flex: 2 1 400px;
+  flex: 1;
 }
 
 .text-box h2 {
-  font-size: 2rem;
-  color: #ffcc80;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
   margin-bottom: 0.5rem;
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  color: #ffbb33;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
-.text-box p,
-.text-box ul li {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.text-box p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.7;
+  margin-bottom: 1rem;
 }
 
-.text-box ul {
-  padding-left: 1.2rem;
-  margin-top: 1rem;
+.text-box span {
+  color: #ff704d; /* surbrillance orange sur les mots clés */
+  font-weight: bold;
 }
 
-/* ---------------------- */
-/* Footer et boutons */
+/* Footer */
 footer {
-  margin-top: 3rem;
-  padding: 1.5rem;
+  padding: clamp(1rem, 2vw, 2rem);
   text-align: center;
-  background: #283593;
-  color: #fff;
-  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #5e0b8b, #9c27b0);
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.4);
 }
 
 footer table {
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
+  border-collapse: collapse;
 }
 
 footer td {
   padding: 0.5rem 1rem;
 }
 
+/* Boutons */
 button {
-  background: linear-gradient(135deg, #3949ab, #5c6bc0);
+  display: inline-block;
+  background: linear-gradient(135deg, #ba68c8, #9c27b0);
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: clamp(0.6rem, 1.5vw, 1rem) clamp(1rem, 2vw, 2rem);
   border-radius: 30px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 button a {
@@ -127,8 +141,9 @@ button a {
 }
 
 button:hover {
+  background: linear-gradient(135deg, #ff704d, #ba68c8);
   transform: scale(1.05);
-  background: linear-gradient(135deg, #5c6bc0, #7986cb);
+  box-shadow: 0 0 15px #ff704d, 0 0 25px #ba68c8;
 }
 
 button:active {
@@ -137,23 +152,32 @@ button:active {
 
 button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.5);
+  box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.5);
 }
 
-/* ---------------------- */
 /* Responsive */
 @media (max-width: 768px) {
-  main {
+  .main-container {
     flex-direction: column;
+    align-items: center;
   }
 
   .image-box {
-    margin-right: 0;
-    margin-bottom: 20px;
-    max-width: 100%;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1rem;
   }
 
-  .text-box {
-    flex: 1 1 100%;
+  .text-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .text-box p {
+    font-size: 1rem;
+  }
+
+  footer td {
+    display: block;
+    padding: 0.5rem 0;
   }
 }
