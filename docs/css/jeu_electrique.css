@@ -6,23 +6,24 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  color: #2c2c2c;
-  background: linear-gradient(
-    135deg,
-    #1a237e,
-    #3949ab
-  ); /* couleurs différentes pour salle électrique */
+  color: #fff;
+  background: linear-gradient(135deg, #1a237e, #3949ab); /* par défaut */
+}
+
+/* ---------------------- */
+/* Classe spécifique pour la salle électrique */
+body.electrique {
+  background: linear-gradient(135deg, #1a237e, #3949ab);
 }
 
 /* ---------------------- */
 /* Header */
-/* ---------------------- */
 header {
   background: linear-gradient(135deg, #283593, #5c6bc0);
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
@@ -35,7 +36,6 @@ header h1 {
 
 /* ---------------------- */
 /* Section principale avec image et texte */
-/* ---------------------- */
 main {
   max-width: 1000px;
   margin: 40px auto;
@@ -45,7 +45,7 @@ main {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .game-section {
@@ -54,27 +54,18 @@ main {
   width: 100%;
 }
 
-/* Boîte pour l'image */
 .image-box {
-  width: 180px;
-  height: 180px;
-  flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 0 15px #9c27b0, 0 0 30px #ba68c8;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 250px;
+  max-width: 250px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .image-box img {
   width: 100%;
-  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   object-fit: cover;
-}
-
-.image-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px #ff704d, 0 0 40px #ba68c8;
 }
 
 .text-box {
@@ -91,7 +82,6 @@ main {
 .text-box p,
 .text-box ul li {
   font-size: 1.1rem;
-  color: #fff;
   line-height: 1.6;
 }
 
@@ -102,7 +92,6 @@ main {
 
 /* ---------------------- */
 /* Footer et boutons */
-/* ---------------------- */
 footer {
   margin-top: 3rem;
   padding: 1.5rem;
