@@ -54,19 +54,27 @@ main {
   width: 100%;
 }
 
+/* Boîte pour l'image */
 .image-box {
-  flex: 1 1 250px;
-  max-width: 250px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #9c27b0, 0 0 30px #ba68c8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-box img {
   width: 100%;
   height: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   object-fit: cover;
+}
+
+.image-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #ff704d, 0 0 40px #ba68c8;
 }
 
 .text-box {
